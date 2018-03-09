@@ -1,0 +1,38 @@
+@import "partial";
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: $primary-color;
+}
+
+// circles
+
+%circle {
+  @include square($primary, 100px);
+}
+
+.circle-one {
+  @extend %circle;
+}
+
+.circle-two {
+  @extend %circle;
+}
+
+// boxes
+
+$standard: 100px;
+
+%box {
+  @include realSquare($standard * 3,white);
+}
+
+.box-one {
+  @extend %box;
+  border-bottom: 10px solid #ccc;
+}
+
+.box-two {
+  @extend %box;
+}

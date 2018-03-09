@@ -1,0 +1,22 @@
+$primary-color: #ccc;
+
+@mixin border-radius ($radius) {
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin square ($color, $radius) {
+  height: 200px;
+  width: 200px;
+  background-color: $color;
+  @include border-radius($radius);
+}
+
+@mixin realSquare ($size, $color) {
+  height: $size;
+  width: $size;
+  background-color: $color;
+}
